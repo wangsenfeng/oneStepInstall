@@ -1,0 +1,8 @@
+1、配置集群的ssh
+2、需要修改conf下的配置文件
+	INSTALL_USER="hadoop"
+   安装用户
+	INSTALL_PASSWORD="hadoop"安装密码
+	
+NODES="master1 master1ha master2 master2ha h2slave1 h2slave2 h2slave3"安装节点
+3、执行bin下的installssh.sh

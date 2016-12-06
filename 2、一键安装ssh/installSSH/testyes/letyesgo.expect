@@ -1,0 +1,13 @@
+#!/usr/bin/expect -f
+set node [lindex $argv 0]
+set user [lindex $argv 1]
+set timeout -1
+spawn scp ~/.ssh/params.conf $user@$node:~/.ssh/
+expect {
+ "(yes/no)?"
+  {
+  send "yes\n"
+  expect "*assword:" { send "$password\n"}
+ }
+ }
+expect eof

@@ -1,0 +1,20 @@
+#!/usr/bin/expect -f
+#接受参数，设置3个变量，host、user、password
+set dir [lindex $argv 0]
+set host [lindex $argv 1]
+set user [lindex $argv 2]
+set password [lindex $argv 3]
+set timeout -1
+spawn ssh -q $user@$host "$dir/start.sh"
+expect {
+ "(yes/no)?"
+  {
+  send "yes\n"
+  expect "*assword:" { send "$password\n"}
+ }
+ "*assword:"
+{
+ send "$password\n"
+}
+}
+expect eof

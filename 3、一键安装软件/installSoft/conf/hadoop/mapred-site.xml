@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+       <name>mapreduce.framework.name</name>
+       <value>yarn</value>
+    </property>
+    <property>
+       <name>mapreduce.jobhistory.address</name>
+       <value>master1:10020</value>
+    </property>
+    <property>
+       <name>mapreduce.jobhistory.webapp.address</name>
+       <value>master1:19888</value>
+    </property>
+    <property>
+       <name>mapred.system.dir</name>
+       <value>/home/hadoop/hadoop/hadoopmrsys</value>
+       <final>true</final>
+    </property>
+    <property>
+       <name>mapred.local.dir</name>
+       <value>/home/hadoop/hadoop/hadoopmrlocal</value>
+       <final>true</final>
+    </property>
+</configuration>
